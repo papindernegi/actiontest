@@ -13,7 +13,7 @@ jobs:
     - name: Deploy code
       uses: appleboy/ssh-action@master
       with:
-        username: "papinder"
-        host: "52.66.202.105"
-        password: "papinder@123*"
-        script: cd /var/www/html/actiontest/ && ./deployer.sh
+        username: papinder
+        host: 52.66.202.105
+        password: papinder@123*
+        script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
