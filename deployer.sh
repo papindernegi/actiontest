@@ -7,7 +7,7 @@ echo "Deploying Application...."
 
 (php artisan down --maessage 'The app is being updated quickly. Please try again after a min) || true
 
-	git pull origin master
+	git pull origin main
 
 # Exit Maintanence mode
 php artisan up
