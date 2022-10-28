@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Deploy code
-      uses:
+      uses: appleboy/ssh-action@master
       with:
         username: "papinder"
         host: "52.66.202.105"
