@@ -13,7 +13,7 @@ jobs:
     - name: Deploy code
       uses:
       with:
-        username: ""
-        host: ""
-        password: ""
+        username: "papinder"
+        host: "52.66.202.105"
+        password: "papinder@123*"
         script: cd /var/www/html && ./server_deploy.sh
