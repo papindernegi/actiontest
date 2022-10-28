@@ -1,0 +1,19 @@
+name: MyLaravel
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  laravel-tests:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Deploy code
+      uses:
+      with:
+        username: ""
+        host: ""
+        password: ""
+        script: cd /var/www/html && ./server_deploy.sh
