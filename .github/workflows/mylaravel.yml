@@ -13,7 +13,7 @@ jobs:
     - name: Deploy code
       uses: appleboy/ssh-action@master
       with:
-        username: 'papinder'
-        host: '52.66.202.105'
-        password: 'papinder@123*'
-        script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
+          host: ${{secrets.SSH_HOST}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_PASSWORD}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into        
+          script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
