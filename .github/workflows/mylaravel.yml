@@ -12,8 +12,9 @@ jobs:
     steps:
     - name: Deploy code
       uses: appleboy/ssh-action@master
-      env:
-          host: ${{secrets.SSH_HOST}}
-          username : ${{secrets.SSH_USERNAME }} 
-          password: ${{secrets.SSH_PASSWORD}}       
-          script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
+      with:
+        host: ${{secrets.SSH_HOST}}
+        username : ${{secrets.SSH_USERNAME }} 
+        password: ${{secrets.SSH_PASSWORD}}
+        key: ${{secrets.SSH_KEY}}
+        script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
