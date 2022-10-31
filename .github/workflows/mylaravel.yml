@@ -17,4 +17,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
+        script: |
+          whoami
+          ls -al
