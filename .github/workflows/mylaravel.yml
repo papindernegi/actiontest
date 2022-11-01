@@ -9,7 +9,7 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: '52.66.202.105'
-        username: 'papinder'
-        password: ${{ secrets.PASSWORD }}
+        host: ${{ secrets.HOST }}
+        user: ubuntu
+        key: ${{ secrets.PRIVATE_KEY}}
         script: 'cd /var/www/html/actiontest/ && git pull'
