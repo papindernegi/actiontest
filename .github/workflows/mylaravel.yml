@@ -1,14 +1,19 @@
-name: remote ssh command
-on: [push]
-jobs:
+name: MyLaravel
 
-  build:
-    name: Build
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  laravel-tests:
+
     runs-on: ubuntu-latest
+
     steps:
-    - name: executing remote ssh commands using password
-      uses: JimCronqvist/action-ssh@master
+    - name: Deploy code
+      uses: appleboy/ssh-action@master
       with:
-        hosts: 'ubuntu@testfileexist.py'
-        privateKey: ${{ secrets.PRIVATE_KEY }}
-        command: ls -lah
+        username: 'papinder'
+        host: '52.66.202.105'
+        password: 'papinder@123*'
+        script: 'cd /var/www/html/actiontest/ && ./deployer.sh'
