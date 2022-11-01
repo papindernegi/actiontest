@@ -10,6 +10,6 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        user: ubuntu
+        username: ubuntu
         key: ${{ secrets.PRIVATE_KEY}}
         script: 'cd /var/www/html/actiontest/ && git pull'
