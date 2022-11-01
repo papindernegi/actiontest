@@ -7,7 +7,7 @@ on:
 jobs:
   laravel-tests:
 
-    runs-on: laltest-ubuntu
+    runs-on: latest-ubuntu
 
     steps:
     - name: Deploy code
